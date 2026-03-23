@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://xmvkswet8qml"]
+
+[ext_resource type="Texture2D" uid="uid://dl7hvw05u3nqo" path="res://character_spritesheet_24x40.png" id="1_8h1lk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xpabl"]
+atlas = ExtResource("1_8h1lk")
+region = Rect2(0, 0, 24, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgfek"]
+atlas = ExtResource("1_8h1lk")
+region = Rect2(24, 0, 24, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b481w"]
+atlas = ExtResource("1_8h1lk")
+region = Rect2(48, 0, 24, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m316u"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xpabl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wgfek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b481w")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xpabl"]
+radius = 23.0
+height = 97.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1995647846]
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=378033560]
+texture_filter = 1
+position = Vector2(44.31101, 590.3796)
+scale = Vector2(1.7240824, 2.2810202)
+sprite_frames = SubResource("SpriteFrames_m316u")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.72756696
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=456416385]
+position = Vector2(45, 591)
+shape = SubResource("CapsuleShape2D_xpabl")
