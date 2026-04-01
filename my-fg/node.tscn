@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://camm2wulwfpmy"]
 
 [ext_resource type="Texture2D" uid="uid://b1nrm0f6psthu" path="res://Wildfire_Release_Image_5.jpg" id="1_sy5k4"]
+[ext_resource type="AudioStream" uid="uid://cms28d0yomxd2" path="res://Hero Immortal.mp3" id="2_bss38"]
 [ext_resource type="Texture2D" uid="uid://bfs0wfcaosji2" path="res://tiles_4x/crate_hay.png" id="2_e2u21"]
 [ext_resource type="Texture2D" uid="uid://dkfjn1k1qxuq" path="res://tiles_4x/rock_stone.png" id="3_bss38"]
 [ext_resource type="PackedScene" uid="uid://cgeb2r4kp4ees" path="res://character_body_2d.tscn" id="4_e2u21"]
@@ -92,6 +93,10 @@ offset_right = 1922.0
 offset_bottom = 258.0
 grow_vertical = 2
 texture = ExtResource("1_sy5k4")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="TextureRect" unique_id=1262307990]
+stream = ExtResource("2_bss38")
+volume_db = -0.912
 
 [node name="TileMap" type="TileMap" parent="." unique_id=414956748]
 texture_filter = 1
